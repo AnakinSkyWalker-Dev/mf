@@ -1,5 +1,5 @@
-import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import { galleryItems, videoItem } from '../../data/constants'
+import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import * as S from './styles'
 
 export function Gallery() {
@@ -10,7 +10,7 @@ export function Gallery() {
       <S.Container>
         <S.Header $visible={isVisible}>
           <S.SectionTitle>
-            Nossos <span>Serviços</span>
+            Nossa <span>Galeria</span>
           </S.SectionTitle>
           <S.SectionSubtitle>
             Veja alguns dos nossos trabalhos realizados com excelência e dedicação.

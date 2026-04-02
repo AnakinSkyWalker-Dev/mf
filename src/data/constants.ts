@@ -97,13 +97,13 @@ export const pricingPlans = [
 ] as const
 
 export const contactInfo = {
-  phone: '(43) 999871557',
-  whatsapp: '5543999871557', 
-  email: 'contato@mfestetica.com.br',
-  address: 'R. Conselheiro Zacarias - Jardim Santa Cecilia, Manoel Ribas - PR, 85260-000',
+  phone: '(43) 99952-1514',
+  whatsapp: '554399952-1514', 
+  email: 'contato@bigodestetica.com.br',
+  address: 'Av. Brasil, 1082 - Jardim Santa Mercedes, Manoel Ribas - PR, 85260-000',
   coordinates: {
-    lat: -24.2661,
-    lng: -51.6733,
+    lat: -24.5202262,
+    lng: -51.6714404,
   },
   workingHours: {
     weekdays: 'Seg a Sex: 08:00 - 18:00',
@@ -111,6 +111,6 @@ export const contactInfo = {
     sunday: 'Dom: Fechado',
   },
   socialLinks: {
-    instagram: 'mf_estetica.automotiva',
+    instagram: 'bigodelavacar',
   },
 } as const

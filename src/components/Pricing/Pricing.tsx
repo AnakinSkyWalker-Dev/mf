@@ -1,5 +1,5 @@
+import { contactInfo, pricingPlans } from '../../data/constants'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
-import { pricingPlans, contactInfo } from '../../data/constants'
 import * as S from './styles'
 
 export function Pricing() {

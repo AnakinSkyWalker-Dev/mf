@@ -7,7 +7,7 @@ export function MapSection() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 })
   const { ref: infoRef, isVisible: infoVisible } = useScrollAnimation({ threshold: 0.2 })
 
-  const mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660!2d${contactInfo.coordinates.lng}!3d${contactInfo.coordinates.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s${encodeURIComponent(contactInfo.address)}!5e0!3m2!1spt-BR!2sbr!4v1234567890000`
+  const mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3629.995844566071!2d${contactInfo.coordinates.lng}!3d${contactInfo.coordinates.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eea100750f5a37%3A0x46b2e1392a69a204!2s${encodeURIComponent(contactInfo.address)}!5e0!3m2!1sen!2sbr!4v1775099617476!5m2!1sen!2sbr`
 
   return (
     <S.Section id="location" ref={ref}>
@@ -39,7 +39,7 @@ export function MapSection() {
             </svg>
             <S.LocationText>
               <a 
-                href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`}
+                href="https://www.google.com/maps/place/Est%C3%A9tica+automotiva+do+Bigode/@-24.5202262,-51.6740153,17z/data=!4m14!1m7!3m6!1s0x94eea100750f5a37:0x46b2e1392a69a204!2sEst%C3%A9tica+automotiva+do+Bigode!8m2!3d-24.5202262!4d-51.6714404!16s%2Fg%2F11w1dn8yt7!3m5!1s0x94eea100750f5a37:0x46b2e1392a69a204!8m2!3d-24.5202262!4d-51.6714404!16s%2Fg%2F11w1dn8yt7?entry=ttu&g_ep=EgoyMDI2MDMzMC4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank" 
                 rel="noopener noreferrer"
               >

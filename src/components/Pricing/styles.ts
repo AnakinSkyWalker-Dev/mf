@@ -99,7 +99,7 @@ export const PackageName = styled.h3`
 
 export const Price = styled.div`
   font-family: ${theme.fonts.heading};
-  font-size: 4rem;
+  font-size: 3rem;
   color: ${theme.colors.primary};
   margin-bottom: ${theme.spacing.xs};
   display: flex;
@@ -107,7 +107,7 @@ export const Price = styled.div`
   gap: ${theme.spacing.xs};
 
   span {
-    font-size: 1.5rem;
+    font-size: 2.6rem;
     color: ${theme.colors.textSecondary};
   }
 `

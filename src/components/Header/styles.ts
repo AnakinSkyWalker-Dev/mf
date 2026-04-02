@@ -37,11 +37,17 @@ export const Nav = styled.nav`
 
 export const Logo = styled.img`
   height: 60px;
-  border-radius: 8px;
+  border-radius: ${theme.borderRadius.lg};
   transition: height ${theme.transitions.normal};
+  border: 2px solid ${theme.colors.primary};
+  transition: border-color ${theme.transitions.normal};
 
   ${HeaderContainer}.scrolled & {
     height: 50px;
+  }
+
+  &:hover {
+    border-color: ${theme.colors.secondaryLight};
   }
 
   @media (max-width: ${theme.breakpoints.md}) {
@@ -102,9 +108,14 @@ export const WhatsAppButton = styled.a`
   text-decoration: none;
   font-family: ${theme.fonts.body};
   font-weight: 600;
-  font-size: ${theme.fontSizes.sm};
+  font-size: ${theme.fontSizes.md};
   border-radius: ${theme.borderRadius.full};
   transition: all ${theme.transitions.normal};
+
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
 
   &:hover {
     background: ${theme.colors.primaryDark};

@@ -7,8 +7,8 @@ export function Footer() {
     <S.FooterWrapper>
       <S.Container>
         <S.Logo>
-          <img src="/logo_mf.webp" alt="MF Estética Automotiva" />
-          <S.LogoText>MF Estética Automotiva</S.LogoText>
+          <img src="/logo.jpg" alt="Bigode Estética Automotiva" />
+          <S.LogoText>Bigode Estética Automotiva</S.LogoText>
         </S.Logo>
 
         <S.Copyright>

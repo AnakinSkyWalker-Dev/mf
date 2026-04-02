@@ -3,7 +3,7 @@ import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import { AutomotiveAestheticsIcon } from '../../icons/AutomotiveAestheticsIcon'
 import { AutomotivePolishingIcon } from '../../icons/AutomotivePolishingIcon'
 import { CarWashIcon } from '../../icons/CarWashIcon'
-import { CornerGlowLeft, CornerGlowRight } from '../Hero/styles'
+import { CornerGlowLeft, CornerGlowRight } from '../Hero/HeroBackground/styles'
 import * as S from './styles'
 
 const iconMap: Record<string, React.ComponentType> = {

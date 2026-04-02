@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import { contactInfo } from '../../data/constants'
-import { scrollToSection } from '../../utils/smoothScroll'
+import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import { WhatsAppIcon } from '../../icons/WhatsAppIcon'
+import { scrollToSection } from '../../utils/smoothScroll'
 import * as S from './styles'
 
 export function Header() {
@@ -32,7 +32,7 @@ export function Header() {
       className={`${isScrolled ? 'scrolled' : ''} ${isVisible ? 'visible' : ''}`}
     >
       <S.Nav>
-        <S.Logo src="/logo_mf.webp" alt="MF Estética Automotiva" />
+        <S.Logo src="/logo.jpg" alt="Bigode Estética Automotiva" />
         <S.NavLinks>
           {navLinks.map((link) => (
             <S.NavLink key={link.section} onClick={() => scrollToSection(link.section)}>

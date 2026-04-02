@@ -1,5 +1,6 @@
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
-import { scrollToSection } from '../../utils/smoothScroll'
+import { HeroBackground } from './HeroBackground/HeroBackground'
+import { HeroButtons } from './HeroButtons/HeroButtons'
 import * as S from './styles'
 
 export function Hero() {
@@ -7,15 +8,7 @@ export function Hero() {
 
   return (
     <S.HeroSection id="hero" ref={ref}>
-      <S.VideoBackground autoPlay muted loop playsInline>
-        <source src="/car.mp4" type="video/mp4" />
-      </S.VideoBackground>
-      <S.Overlay />
-      
-      <S.GridLines />
-      
-      <S.CornerGlowLeft />
-      <S.CornerGlowRight />
+      <HeroBackground />
       
       <S.Content $visible={isVisible}>
         <S.Badge>
@@ -33,14 +26,7 @@ export function Hero() {
           para manter seu carro sempre como novo.
         </S.Subtitle>
         
-        <S.ButtonGroup>
-          <S.PrimaryButton onClick={() => scrollToSection('pricing')}>
-            Ver Valores
-          </S.PrimaryButton>
-          <S.SecondaryButton onClick={() => scrollToSection('services')}>
-            Ver Serviços
-          </S.SecondaryButton>
-        </S.ButtonGroup>
+        <HeroButtons />
       </S.Content>
 
       <S.ScrollIndicator>
