@@ -23,7 +23,7 @@ export const Content = styled.div<{ $visible: boolean }>`
   max-width: 800px;
   opacity: ${({ $visible }) => $visible ? 1 : 0};
   transform: translateY(${({ $visible }) => $visible ? '0' : '30px'});
-  transition: all 0.8s ease;
+  transition: opacity ${theme.transitions.slowest}, transform ${theme.transitions.slowest};
   display: flex;
   flex-direction: column;
   align-items: center;

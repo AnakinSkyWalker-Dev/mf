@@ -18,7 +18,7 @@ export const Header = styled.div<{ $visible: boolean }>`
   margin-bottom: ${theme.spacing['3xl']};
   opacity: ${({ $visible }) => $visible ? 1 : 0};
   transform: translateY(${({ $visible }) => $visible ? '0' : '30px'});
-  transition: all 0.8s ease;
+  transition: opacity ${theme.transitions.slowest}, transform ${theme.transitions.slowest};
 `
 
 export const SectionTitle = styled.h2`
@@ -47,10 +47,11 @@ export const ContactGrid = styled.div<{ $visible: boolean }>`
   gap: ${theme.spacing.xl};
   opacity: ${({ $visible }) => $visible ? 1 : 0};
   transform: translateY(${({ $visible }) => $visible ? '0' : '30px'});
-  transition: all 0.8s ease 0.3s;
+  transition: opacity ${theme.transitions.slowest} 0.3s, transform ${theme.transitions.slowest} 0.3s;
 
   @media (max-width: ${theme.breakpoints.md}) {
     grid-template-columns: 1fr;
+    width: 100%;
     max-width: 400px;
     margin: 0 auto;
   }
@@ -65,13 +66,17 @@ export const ContactCard = styled.a`
   background: ${theme.colors.backgroundCard};
   border-radius: ${theme.borderRadius.xl};
   text-decoration: none;
-  transition: all ${theme.transitions.normal};
+  transition: transform ${theme.transitions.normal}, border-color ${theme.transitions.normal}, box-shadow ${theme.transitions.normal};
   border: 1px solid transparent;
 
   &:hover {
     transform: translateY(-8px);
     border-color: ${theme.colors.primary}30;
     box-shadow: ${theme.shadows.xl};
+  }
+
+  @media (max-width: ${theme.breakpoints.md}) {
+    padding: ${theme.spacing.md}; 
   }
 `
 
@@ -84,7 +89,7 @@ export const IconWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: ${theme.spacing.lg};
-  transition: all ${theme.transitions.normal};
+  transition: background ${theme.transitions.normal};
 
   ${ContactCard}:hover & {
     background: ${theme.colors.primary};

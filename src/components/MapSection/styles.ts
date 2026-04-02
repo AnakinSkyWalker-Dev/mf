@@ -17,7 +17,7 @@ export const Header = styled.div<{ $visible: boolean }>`
   margin-bottom: ${theme.spacing['3xl']};
   opacity: ${({ $visible }) => $visible ? 1 : 0};
   transform: translateY(${({ $visible }) => $visible ? '0' : '30px'});
-  transition: all 0.8s ease;
+  transition: opacity ${theme.transitions.slowest}, transform ${theme.transitions.slowest};
 `
 
 export const SectionTitle = styled.h2`
@@ -46,7 +46,7 @@ export const MapWrapper = styled.div<{ $visible: boolean }>`
   box-shadow: ${theme.shadows.xl};
   opacity: ${({ $visible }) => $visible ? 1 : 0};
   transform: translateY(${({ $visible }) => $visible ? '0' : '30px'});
-  transition: all 0.8s ease 0.3s;
+  transition: opacity ${theme.transitions.slowest} 0.3s, transform ${theme.transitions.slowest} 0.3s;
 
   iframe {
     width: 100%;
@@ -77,7 +77,7 @@ export const LocationItem = styled.div<{ $visible: boolean }>`
   gap: ${theme.spacing.md};
   opacity: ${({ $visible }) => $visible ? 1 : 0};
   transform: translateY(${({ $visible }) => $visible ? '0' : '20px'});
-  transition: all 0.6s ease 0.5s;
+  transition: opacity ${theme.transitions.slower} 0.5s, transform ${theme.transitions.slower} 0.5s;
 
   svg {
     width: 24px;

@@ -59,7 +59,7 @@ export const SocialLink = styled.a`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: all ${theme.transitions.normal};
+  transition: background ${theme.transitions.normal}, transform ${theme.transitions.normal};
 
   &:hover {
     background: ${theme.colors.primary};

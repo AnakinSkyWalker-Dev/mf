@@ -17,7 +17,7 @@ export const Header = styled.div<{ $visible: boolean }>`
   margin-bottom: ${theme.spacing['3xl']};
   opacity: ${({ $visible }) => $visible ? 1 : 0};
   transform: translateY(${({ $visible }) => $visible ? '0' : '30px'});
-  transition: all 0.8s ease;
+  transition: opacity ${theme.transitions.slowest}, transform ${theme.transitions.slowest};
 `
 
 export const SectionTitle = styled.h2`
@@ -47,7 +47,7 @@ export const PricingGrid = styled.div<{ $visible: boolean }>`
   align-items: stretch;
   opacity: ${({ $visible }) => $visible ? 1 : 0};
   transform: translateY(${({ $visible }) => $visible ? '0' : '50px'});
-  transition: all 0.8s ease 0.3s;
+  transition: opacity ${theme.transitions.slowest} 0.3s, transform ${theme.transitions.slowest} 0.3s;
 
   @media (max-width: ${theme.breakpoints.lg}) {
     grid-template-columns: 1fr;
@@ -62,7 +62,7 @@ export const PriceCard = styled.div`
   padding: ${theme.spacing.xl};
   position: relative;
   overflow: hidden;
-  transition: all ${theme.transitions.normal};
+  transition: transform ${theme.transitions.normal}, border-color ${theme.transitions.normal}, box-shadow ${theme.transitions.normal};
   border: 1px solid transparent;
 
   &:hover {
@@ -160,7 +160,7 @@ export const CTAButton = styled.a`
   font-size: ${theme.fontSizes.sm};
   text-transform: uppercase;
   border-radius: ${theme.borderRadius.md};
-  transition: all ${theme.transitions.normal};
+  transition: transform ${theme.transitions.normal}, box-shadow ${theme.transitions.normal};
   box-sizing: border-box;
   white-space: nowrap;
   overflow: hidden;
@@ -177,7 +177,7 @@ export const PopularCardWrapper = styled.div`
   border-radius: ${theme.borderRadius.xl};
   padding: ${theme.spacing.xl};
   position: relative;
-  transition: all ${theme.transitions.normal};
+  transition: transform ${theme.transitions.normal}, box-shadow ${theme.transitions.normal};
   transform: scale(1.05);
   border: 2px solid ${theme.colors.primary};
 

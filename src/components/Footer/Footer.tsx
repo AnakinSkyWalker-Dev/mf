@@ -12,7 +12,7 @@ export function Footer() {
         </S.Logo>
 
         <S.Copyright>
-          © {new Date().getFullYear()} MF Estética Automotiva. Todos os direitos reservados.
+          © {new Date().getFullYear()} Bigode Estética Automotiva. Todos os direitos reservados.
         </S.Copyright>
 
         <S.SocialLinks>

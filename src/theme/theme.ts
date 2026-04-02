@@ -65,6 +65,8 @@ export const theme = {
     fast: '0.15s ease',
     normal: '0.3s ease',
     slow: '0.5s ease',
+    slower: '0.6s ease',
+    slowest: '0.8s ease',
   },
   breakpoints: {
     sm: '640px',

@@ -29,7 +29,7 @@ export const Header = styled.div<{ $visible: boolean }>`
   margin-bottom: ${theme.spacing['3xl']};
   opacity: ${({ $visible }) => $visible ? 1 : 0};
   transform: translateY(${({ $visible }) => $visible ? '0' : '30px'});
-  transition: all 0.8s ease;
+  transition: opacity ${theme.transitions.slowest}, transform ${theme.transitions.slowest};
 `
 
 export const SectionTitle = styled.h2`
@@ -58,7 +58,7 @@ export const ServicesGrid = styled.div<{ $visible: boolean }>`
   gap: ${theme.spacing.xl};
   opacity: ${({ $visible }) => $visible ? 1 : 0};
   transform: translateY(${({ $visible }) => $visible ? '0' : '50px'});
-  transition: all 0.8s ease 0.2s;
+  transition: opacity ${theme.transitions.slowest} 0.2s, transform ${theme.transitions.slowest} 0.2s;
 
   @media (max-width: ${theme.breakpoints.lg}) {
     grid-template-columns: repeat(2, 1fr);
@@ -75,7 +75,7 @@ export const ServiceCard = styled.div`
   padding: ${theme.spacing.xl};
   position: relative;
   overflow: hidden;
-  transition: all ${theme.transitions.normal};
+  transition: transform ${theme.transitions.normal}, border-color ${theme.transitions.normal}, box-shadow ${theme.transitions.normal};
   border: 1px solid transparent;
 
   &::before {
@@ -112,7 +112,7 @@ export const IconWrapper = styled.div`
   justify-content: center;
   margin-bottom: ${theme.spacing.lg};
   color: ${theme.colors.primary};
-  transition: all ${theme.transitions.normal};
+  transition: background ${theme.transitions.normal}, color ${theme.transitions.normal}, transform ${theme.transitions.normal};
 
   ${ServiceCard}:hover & {
     background: ${theme.colors.primary};

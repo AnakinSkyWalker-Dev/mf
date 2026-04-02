@@ -17,7 +17,7 @@ export const Header = styled.div<{ $visible: boolean }>`
   margin-bottom: ${theme.spacing['3xl']};
   opacity: ${({ $visible }) => $visible ? 1 : 0};
   transform: translateY(${({ $visible }) => $visible ? '0' : '30px'});
-  transition: all 0.8s ease;
+  transition: opacity ${theme.transitions.slowest}, transform ${theme.transitions.slowest};
 `
 
 export const SectionTitle = styled.h2`
@@ -47,7 +47,7 @@ export const GalleryGrid = styled.div<{ $visible: boolean }>`
   gap: ${theme.spacing.lg};
   opacity: ${({ $visible }) => $visible ? 1 : 0};
   transform: translateY(${({ $visible }) => $visible ? '0' : '50px'});
-  transition: all 0.8s ease 0.3s;
+  transition: opacity ${theme.transitions.slowest} 0.3s, transform ${theme.transitions.slowest} 0.3s;
 
   @media (max-width: ${theme.breakpoints.md}) {
     grid-template-columns: repeat(2, 1fr);
